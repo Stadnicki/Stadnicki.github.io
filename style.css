@@ -1,0 +1,14 @@
+body
+{
+	background-color: grey;
+}
+
+.LogForm
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	border: solid 1px black;
+}
