@@ -16,7 +16,7 @@
   const btnSignUp = document.getElementById('btnSignUp');
   const btnLogout = document.getElementById('btnLogout');
 
-  // Add login event
+  // Sign In
   
   btnLogin.addEventListener('click', e => {
     const email = txtEmail.value;
@@ -26,15 +26,15 @@
     promise.catch(e => console.log(e.message));
   });
 
-    // Add signup event
+  // Signup 
 
-    btnSignUp.addEventListener('click', e=> {
-      const email = txtEmail.value;
-      const pass = txtPassword.value;
-      const auth = firebase.auth();
-      const promise = auth.createUserWithEmailAndPassword(email,pass);
-      promise.catch(e => console.log(e.message));
-    });
+  btnSignUp.addEventListener('click', e=> {
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+  });
 
     // Log out
 
@@ -42,12 +42,29 @@
       firebase.auth().signOut();
     })
 
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+  }
+});
+
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
         console.log(firebaseUser);
-        btnLogout.classList.remove('hide');
+        btnLogout.style.visibility = 'visible';
       } else {
         console.log('not logged in');
-        btnLogout.classList.add('hide');
+        btnLogout.style.visibility = 'hidden';
       }
     })
