@@ -2,3 +2,39 @@
 {
 	visibility: hidden;
 }
+
+#form
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px;
+	width: 500px;
+}
+
+#LogAndPass 
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#LogAndPass > input 
+{
+	width: 250px;
+	height: 25px;
+	padding: 0px 10px;
+	margin-bottom: 5px;
+}
+
+#LogButtons
+{
+	display: flex;
+	flex-direction: column;
+	width: 270px;
+}
+
+#LogButtons > button {
+	margin-top: 15px;
+	width: 135px;
+	height: 25px;
+}

@@ -63,8 +63,16 @@
       if(firebaseUser) {
         console.log(firebaseUser);
         btnLogout.style.visibility = 'visible';
+        txtEmail.style.visibility = 'hidden';
+        txtPassword.style.visibility = 'hidden';
+        btnLogin.style.visibility = 'hidden';
+        btnSignUp.style.visibility = 'hidden';
       } else {
         console.log('not logged in');
         btnLogout.style.visibility = 'hidden';
+        txtEmail.style.visibility = 'visible';
+        txtPassword.style.visibility = 'visible';
+        btnLogin.style.visibility = 'visible';
+        btnSignUp.style.visibility = 'visible';
       }
     })
