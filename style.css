@@ -40,6 +40,11 @@ body
 	border: solid 2px white;
 	background-color: #EEEEEE;
 }
+#SignLogForm > input:focus
+{
+	border: dashed 2px #000000;
+	background-color: #EEEEEE;
+}
 
 .btn-action
 {
