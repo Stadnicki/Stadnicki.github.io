@@ -1,40 +1,68 @@
-.btb-logout
+* 
 {
-	visibility: hidden;
+	margin: 0px;
+	padding: 0px;
 }
 
-#form
+body
 {
+	/* Background image from from www.subtlepatterns.com */
+	background-image: url("img/black-Linen.png");
+}
+
+#SignLogForm
+{
+	border: solid 2px black;
+	border-radius: 10px;
+	background-color: #98C1D9;
 	display: flex;
-	align-items: center;
 	flex-direction: column;
-	padding: 5px;
-	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+	padding: 20px;
+	width: 300px;
 }
 
-#LogAndPass 
-{
-	display: flex;
-	flex-direction: column;
-}
 
-#LogAndPass > input 
+#SignLogForm > input 
 {
-	width: 250px;
-	height: 25px;
+	height: 30px;
 	padding: 0px 10px;
 	margin-bottom: 5px;
+	border: solid 2px black;
+	border-radius: 5px;
+	background-color: #DDDDDD;
 }
 
-#LogButtons
+#SignLogForm > input:hover
 {
-	display: flex;
-	flex-direction: column;
-	width: 270px;
+	border: solid 2px white;
+	background-color: #EEEEEE;
 }
 
-#LogButtons > button {
+.btn-action
+{
+	display: none;
+}
+
+.btb-logout
+{
+	display: none;
+}
+
+#SignLogForm > button 
+{
 	margin-top: 15px;
-	width: 135px;
-	height: 25px;
+	height: 35px;
+	border-radius: 5px;
+	background-color: #3D5A80;
+	color: white;
+	border: solid 2px black;
+}
+
+#SignLogForm > button:hover
+{
+	background-color: #4E6B91;
+	border: solid 2px white;
 }

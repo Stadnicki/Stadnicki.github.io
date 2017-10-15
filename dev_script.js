@@ -1,3 +1,4 @@
+(function () {
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyA8HsEo7SFBogFORGbqsZHzwJB5amZBX8M",
@@ -15,6 +16,8 @@
   const btnLogin = document.getElementById('btnLogin');
   const btnSignUp = document.getElementById('btnSignUp');
   const btnLogout = document.getElementById('btnLogout');
+
+  
 
   // Sign In
   
@@ -34,6 +37,14 @@
     const auth = firebase.auth();
     const promise = auth.createUserWithEmailAndPassword(email,pass);
     promise.catch(e => console.log(e.message));
+    user = firebase.auth().currentUser;
+    promise.then(function(user) {
+      alert("wyslano email");
+      user.sendEmailVerification();
+    }, function(error) {
+      // An error happened.
+    });
+
   });
 
     // Log out
@@ -42,22 +53,6 @@
       firebase.auth().signOut();
     })
 
-    firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
-});
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
@@ -76,3 +71,4 @@
         btnSignUp.style.visibility = 'visible';
       }
     })
+}());
