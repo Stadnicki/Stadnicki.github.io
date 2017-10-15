@@ -39,7 +39,6 @@
     promise.catch(e => console.log(e.message));
     user = firebase.auth().currentUser;
     promise.then(function(user) {
-      alert("wyslano email");
       user.sendEmailVerification();
     }, function(error) {
       // An error happened.
