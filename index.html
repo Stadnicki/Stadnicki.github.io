@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Typing Speed</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style/main.css">
+    </head>
+
+    <body>
+        <div class="root">
+            <section id="words-output" > </section>
+            <input type="text" id="words-input" onkeyup="handleKeyPressed(event)">
+
+            <div>Time left: <span id="timer">60</span></div>
+            <div>Correct: <span id="correct-counter">0</span></div>
+            <div>All: <span id="all-counter">0</span></div>
+            <div>Correct %: <span id="correct-percent">0%</span></div>
+        </div>
+        <script src="/js/Hello.js"></script>
+    </body>
+</html>
