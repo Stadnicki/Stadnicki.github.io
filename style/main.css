@@ -4,7 +4,7 @@
     position: relative; left: 50%;
     transform: translateX(-50%); 
     font-size: 1.5em;
-    height: 3em;
+    height: 4em;
     overflow: hidden;
     border-color: black;
     border-style: solid;
@@ -29,6 +29,7 @@ body{
     width: 90%;
     position: relative; left: 50%;
     transform: translateX(-50%); 
+    font-size: 1.2em;
 }
 
 
@@ -36,7 +37,7 @@ body{
     display: inline-block;
     margin: 2px;
     padding: 2px;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .current-word {
