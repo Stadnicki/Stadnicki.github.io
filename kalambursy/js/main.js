@@ -7,7 +7,7 @@ var currentX = 0;
 var previousY = 0;
 var currentY = 0;
 
-var color = "black", thickness = 2;
+var color = "black", thickness = 3;
 
 function init() {
     canvas = document.getElementById('canvasField');
@@ -32,7 +32,7 @@ function drawLine() {
     ctx.moveTo(previousX, previousY);
     ctx.lineTo(currentX, currentY);
     ctx.strokeStyle = color;
-    ctx.lineWidth = 10;
+    ctx.lineWidth = thickness;
     ctx.stroke();
 }
 
