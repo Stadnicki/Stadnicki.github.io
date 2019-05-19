@@ -1,22 +1,20 @@
-var canvas;
-var isDrawing;
-var ctx;
+const canvas = document.getElementById('canvasField');
+let ctx = canvas.getContext("2d");
+let isDrawing;
 
-var previousX = 0;
-var currentX = 0;
-var previousY = 0;
-var currentY = 0;
+let previousX = 0;
+let currentX = 0;
+let previousY = 0;
+let currentY = 0;
 
-var lineColor;
-var lineThickness;
+let lineColor;
+let lineThickness;
 
 function init() {
-    canvas = document.getElementById('canvasField');
-    ctx = canvas.getContext("2d");
-    initCanvasSettings();
+    loadCanvasSettings();
 }
 
-function initCanvasSettings(){
+function loadCanvasSettings(){
     ctx.lineCap = 'round';
     lineColor = "black";
     lineThickness = 3;
