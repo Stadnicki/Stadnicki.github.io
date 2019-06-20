@@ -1,5 +1,9 @@
-  p{
+  	p{
             text-align: justify !important;
+            line-height: 1.2em !important;
+        }
+
+	span{
             line-height: 1.2em !important;
         }
 
@@ -764,7 +768,7 @@
             border-top-style: solid;
             border-left-style: solid;
             border-bottom-width: 1pt;
-            width: 147.8pt;
+            width: 165.8pt;
             border-top-color: #000000;
             border-bottom-style: solid
         }
